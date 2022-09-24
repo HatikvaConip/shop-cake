@@ -1,3 +1,4 @@
+// styles
 import "./Card.scss";
 
 const Card = ({ card }) => {
@@ -5,7 +6,11 @@ const Card = ({ card }) => {
     <div className="container">
       <div className="container-card">
         <div className="title">
-          <img src={card?.logo} alt="hello" style={{width: "36px", height: "36px"}}></img>
+          <img
+            src={card?.logo}
+            alt="hello"
+            style={{ width: "36px", height: "36px" }}
+          ></img>
           <h3>{card?.title}</h3>
         </div>
         <div className="boddy">
@@ -17,7 +22,7 @@ const Card = ({ card }) => {
         </div>
         <div className="footer">
           <div>{card?.description}</div>
-          <div>{card?.prezzo}</div>
+          <div className="prezzo">{card?.prezzo}</div>
         </div>
       </div>
     </div>
