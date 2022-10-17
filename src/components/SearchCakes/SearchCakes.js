@@ -1,17 +1,18 @@
 import "./SearchCakes";
+import {doSearch} from "./utils/doSearch";
 
 const SearchCakes = ({ cards, doFilteredCards }) => {
 
-  const doSearch = (e) => {
-    const filtered = cards.filter((card) => {
-      return card?.title.toLowerCase().includes(e.target.value.toLowerCase());
-    });
+/*  const { doSearch } = useSearchCakes({ cards, doFilteredCards }); */
 
-    doFilteredCards(filtered);
-  };
+const onClick = (e)=> {
+
+  doSearch(e, cards, doFilteredCards)
+}
+
   return (
     <div className="container-search">
-      <input onChange={doSearch} />
+      <input onChange={onClick} />
       {/* TODO card list */}
     </div>
   );

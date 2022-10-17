@@ -9,15 +9,15 @@ const Card = ({ card }) => {
           <img
             src={card?.logo}
             alt="hello"
-            style={{ width: "36px", height: "36px" }}
+            style={{ width: "36px", height: "36px"}}
           ></img>
           <h3>{card?.title}</h3>
         </div>
-        <div className="boddy">
+        <div className="body">
           <img
             src={card?.img}
             alt="hello"
-            style={{ width: "150px", height: "200px" }}
+            style={{ width: "150px", height: "200px",border: "none", borderRadius: "6px" }}
           ></img>
         </div>
         <div className="footer">
