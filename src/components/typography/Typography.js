@@ -1,8 +1,18 @@
 // style
 import "./Typography.scss";
 import { getFontSize } from "../../utils/getFontSize";
+import { getMargin } from "../../utils/getMargin";
 
-const Typography = ({ size = "", text = "", color, fontFamily, fontStyle }) => {
+const Typography = ({
+  size = "",
+  text = "",
+  color,
+  fontFamily,
+  fontStyle,
+  margin = [""],
+}) => {
+    console.log(getMargin(margin));
+    console.log({margin})
   return (
     <span
       style={{
@@ -10,6 +20,7 @@ const Typography = ({ size = "", text = "", color, fontFamily, fontStyle }) => {
         fontFamily: fontFamily,
         fontStyle: fontStyle,
         fontSize: getFontSize(size),
+        margin: getMargin(margin),
       }}
       className="typography"
       //``

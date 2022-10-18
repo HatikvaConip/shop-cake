@@ -9,6 +9,7 @@ import SearchCakes from "../SearchCakes";
 import Button from "../button/Button";
 import Select from "../select/Select";
 import Typography from "../typography/Typography";
+import Badge from "../badge/Badge";
 
 const Bacheca = ({ cards }) => {
   const [cardsFiltered, setCardsFiltered] = useState(cards);
@@ -37,13 +38,31 @@ const Bacheca = ({ cards }) => {
           bgColor={"red"}
           handleClick={handleClick}
         />
-        <Typography
-          size="XL"
+        <Badge
+          bgColor="#66ccff"
+          size="L"
+          margin={["20"]}
+          borderRadius={["20"]}
+          text={
+            <Typography
+              size="M"
+              text="torta"
+              color={"black"}
+              fontFamily={"Arial"}
+              fontStyle={"Normal"}
+              margin={["25"]}
+            />
+          }
+          style={{badge :{ backgroundColor:"blue"} }}
+        ></Badge>
+        {<Typography
+          size="XS"
           text="torta deriva dal latino tortus, participio passato di torquere, ovvero piegare o avvolgere"
           color={"black"}
           fontFamily={"Arial"}
           fontStyle={"italic"}
-        />
+          margin={["15"]}
+        />}
         {showMessage && "hello"}
         <Select label="escoge el color " optionsList={list} />
       </div>
@@ -67,5 +86,3 @@ const Bacheca = ({ cards }) => {
   );
 };
 export default Bacheca;
-
-//debe retornar un text con diverse misure sia "s" "m" "l" puo passare anche una propieta color e una propieta font-family e anche un type bol normal o Italic font size:
