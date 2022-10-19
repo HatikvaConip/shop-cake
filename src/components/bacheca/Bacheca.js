@@ -39,7 +39,7 @@ const Bacheca = ({ cards }) => {
           handleClick={handleClick}
         />
         <Badge
-          bgColor="#66ccff"
+          bgColor="blue"
           size="L"
           margin={["20"]}
           borderRadius={["20"]}
@@ -53,7 +53,7 @@ const Bacheca = ({ cards }) => {
               margin={["25"]}
             />
           }
-          style={{badge :{ backgroundColor:"blue"} }}
+          style={{badge :{ backgroundColor:"#66ccff"} }}
         ></Badge>
         {<Typography
           size="XS"
