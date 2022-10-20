@@ -12,7 +12,12 @@ const Badge = ({
   text,
   style = {},
 }) => {
-  const badgeSize = size.toUpperCase() === "S" ? "small" : size.toUpperCase() === "M" ? "medium" : "large";
+  const badgeSize =
+    size.toUpperCase() === "S"
+      ? "small"
+      : size.toUpperCase() === "M"
+      ? "medium"
+      : "large";
   return (
     <div
       style={{
