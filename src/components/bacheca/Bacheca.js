@@ -14,8 +14,10 @@ import Chips from "../chips/Chips";
 import Icon from "../iconComponent/Icon";
 // img
 import icon from "../../logo/logoM.png";
+import cards from "../services/mock/card.mock";
 
-const Bacheca = ({ cards }) => {
+const Bacheca = () => {
+  console.log(cards);
   const [cardsFiltered, setCardsFiltered] = useState(cards);
   const [showMessage, setShowMessage] = useState(false);
 
@@ -73,7 +75,6 @@ const Bacheca = ({ cards }) => {
           style={{ badge: { backgroundColor: "#66ccff" } }}
         />
         <Chips
-          bgColor="	#ff00ff"
           variant = 'S'
           margin={["15"]}
           borderRadius={["20"]}
@@ -108,6 +109,7 @@ const Bacheca = ({ cards }) => {
             />
           }
           isReverse ={false}
+          disabled= {true}
           
           style
         />
@@ -125,7 +127,7 @@ const Bacheca = ({ cards }) => {
         <Select label="escoge el color " optionsList={list} />
       </div>
       <div className="cards-filtered">
-        {cardsFiltered.map((card, i) => {
+        {cardsFiltered?.map((card, i) => {
           return (
             <div key={i}>
               <Card card={card} />

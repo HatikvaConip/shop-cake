@@ -1,9 +1,45 @@
+// mobile
 .container-navbar {
   display: flex;
-  width: 100%;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+  background-color: rgb(11, 230, 223);
+  cursor: pointer;
+  ul {
+    width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 16px 0 16px;
+      margin: 0;  
   
+  }
+  li {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      font-size: 16px;
+      border-bottom: 1px gray solid;
+      .link{
+        text-decoration: none;
+      }
+      
+  }
+  li a:hover {
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+}
+}
+
+// desktop
+@media screen and (min-width: 600px) {
+  .container-navbar {
+    ul {
+      flex-direction: row;
+  }
+  li {
+    justify-content: center;
+    border-bottom: none;
+  }
+  }
 }

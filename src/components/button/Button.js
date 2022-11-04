@@ -5,28 +5,25 @@ import { getBorderRadius } from "../../utils/getBorderRadius";
 const Button = ({
   label = "",
   size = "S",
-  bgColor,
-  margin = [""],
-  borderRadius = [""],
   handleClick,
-  style = {},
+  disabled = false,
+  variant = "", // filled | outline | text
+  ...rest
 }) => {
-  const buttonSize = size.toUpperCase() === "S" ? "small" : size.toUpperCase() === "M" ? "medium" : "large";
+  const buttonSize =
+    size.toUpperCase() === "S"
+      ? "small"
+      : size.toUpperCase() === "M"
+      ? "medium"
+      : "large";
 
   return (
-    <div>
-      <div
-        style={{
-          backgroundColor: bgColor,
-          margin: getMargin(margin),
-          borderRadius: getBorderRadius(borderRadius),
-          ...style?.button,
-        }}
-        className={`base ${buttonSize}`}
-        onClick={handleClick}
-      >
-        {label}
-      </div>
+    <div
+      className={`base ${buttonSize} ${variant} ${disabled && "disabled"}`}
+      onClick={handleClick}
+      {...rest}
+    >
+      {label}
     </div>
   );
 };

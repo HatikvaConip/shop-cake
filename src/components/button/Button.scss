@@ -1,24 +1,64 @@
+$light-blue: #1976d2;
+$dark-blue: #1565c0;
+$white-blue: #1976d20a;
+$azure: #1976d280;
+
 .base {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   font-style: italic;
+  margin: 8px;
+  text-transform: uppercase;
 }
+
+.filled {
+  background-color: $light-blue;
+  color: white;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
+    rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  &:hover {
+    background-color: $dark-blue;
+  }
+}
+.outline {
+  background-color: white;
+  color: $light-blue;
+  border: 1px solid $azure;
+  &:hover {
+    background-color: $white-blue;
+    border: 1px solid $light-blue;
+  }
+}
+.text {
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+  padding: 6px 8px;
+  color: $light-blue;
+  &:hover {
+    background-color: $white-blue;
+  }
+}
+
 .small {
-  width: 100px;
+  width: 130px;
   height: 30px;
   font-size: 13px;
 }
 .medium {
-  width: 200px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   font-size: 15px;
 }
 .large {
-  width: 300px;
-  height: 80px;
+  width: 200px;
+  height: 50px;
   font-size: 20px;
 }

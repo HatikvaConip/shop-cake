@@ -1,0 +1,17 @@
+.hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+    padding: 16px 24px;
+
+    .hamburger {
+        width: 30px;
+        height: 30px;
+        background-color: blue;
+    }
+    .login {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+    }
+}

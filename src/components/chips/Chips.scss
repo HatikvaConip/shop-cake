@@ -1,11 +1,22 @@
 .container-chips {
+  background-color: aliceblue;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  
-}
 
+&:hover {
+  background-color: red;
+}
+&:active {
+  background-color: rgb(203, 233, 8);
+}
+&:focus{
+  border: 10px solid black;
+  padding: 5px;
+}
+}
 .reverse {
   flex-direction: row-reverse;
 }
@@ -13,7 +24,6 @@
   width: 150px;
   height: 40px;
   font-size: 13px;
-  
 }
 .m-size {
   width: 200px;
@@ -22,8 +32,13 @@
 }
 .l-size {
   width: 250px;
-  height:40px;
+  height: 40px;
   font-size: 20px;
-
+}
+.disabled{
+  pointer-events: none;
+  opacity: 0.7;
 }
 
+//pointer-events: none;
+//opacity: 0.4;
