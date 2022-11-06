@@ -1,4 +1,4 @@
-import "./SearchCakes";
+import "./searchCakes";
 import {doSearch} from "./utils/doSearch";
 
 const SearchCakes = ({ cards, doFilteredCards }) => {

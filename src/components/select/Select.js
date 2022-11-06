@@ -1,6 +1,6 @@
 import { useState } from "react";
-//style
-import "./Select.scss";
+import "./select.scss";
+
 const Select = ({ optionsList = [], label = "select " }) => {
   const [selectOption, setSelectOption] = useState(` ${label} ▼ `);
   const [showOption, setShowOption] = useState(false);

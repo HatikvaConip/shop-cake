@@ -1,5 +1,5 @@
 // styles
-import "./Card.scss";
+import "./card.scss";
 
 const Card = ({ card }) => {
   return (

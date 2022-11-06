@@ -1,27 +1,28 @@
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import Home from "../page/home/Home";
-import Bacheca from "../components/bacheca/Bacheca";
-import PageButton from "../page/pageButton/PageButton";
-import PageBadge from "../page/pageBadge/PageBadge";
-import {HamburgerMenuPage} from "../page/hamburgerMenuPage/hamburgerMenuPage";
-import PageTypography from "../page/pageTypography/PageTypography";
-import PageChips from "../page/pageChips/PageChips";
-import PageIcon from "../page/pageIcon/PageIcon";
+import Home from "../pages/home/home";
+import Bacheca from "../pages/bacheca/bacheca";
+import ButtonPage from "../storybook/pages/button/button";
+import BadgePage from "../storybook/pages/badge/badge";
+import {HamburgerMenuPage} from "../storybook/pages/hamburger/hamburger";
+import TypographyPage from "../storybook/pages/typography/typography";
+import ChipPage from "../storybook/pages/chip/chip";
+import IconPage from "../storybook/pages/icon/icon";
 
 // mocks
 const Routing = ({ cards }) => {
   return (
- 
       <Routes>
+        {/* pages */}
         <Route exact path="/" element={<Home />} />
         <Route exact path="/bacheca" element={<Bacheca />} />
-        <Route exact path="/pageButton" element={<PageButton/>} />
-        <Route exact path="/pageBadge" element={<PageBadge/>} />
-        <Route exact path="/pageChips" element={<PageChips/>} />
-        <Route exact path="/pageTypography" element={<PageTypography/>} />
-        <Route exact path="/pageIcon" element={<PageIcon/>} />
-        <Route exact path="/pageHamburger" element={<HamburgerMenuPage />} />
+        {/* storybook */}
+        <Route exact path="/storybook/button" element={<ButtonPage/>} />
+        <Route exact path="/storybook/badge" element={<BadgePage/>} />
+        <Route exact path="/storybook/chip" element={<ChipPage/>} />
+        <Route exact path="/storybook/typography" element={<TypographyPage/>} />
+        <Route exact path="/storybook/icon" element={<IconPage/>} />
+        <Route exact path="/storybook/hamburger" element={<HamburgerMenuPage />} />
       </Routes>
 
   );

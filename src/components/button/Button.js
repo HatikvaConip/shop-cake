@@ -1,4 +1,4 @@
-import "./Button.scss";
+import "./button.scss";
 //utils
 import { getMargin } from "../../utils/getMargin";
 import { getBorderRadius } from "../../utils/getBorderRadius";

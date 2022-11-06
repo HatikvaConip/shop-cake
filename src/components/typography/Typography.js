@@ -1,5 +1,5 @@
 // style
-import "./Typography.scss";
+import "./typography.scss";
 import { getFontSize } from "../../utils/getFontSize";
 import { getMargin } from "../../utils/getMargin";
 

@@ -1,5 +1,5 @@
 //style
-import "./Badge.scss";
+import "./badge.scss";
 import { getMargin } from "../../utils/getMargin";
 import { getBorderRadius } from "../../utils/getBorderRadius";
 
