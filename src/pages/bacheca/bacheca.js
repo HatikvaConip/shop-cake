@@ -89,7 +89,7 @@ const Bacheca = () => {
               style
             />
           }
-          text={
+          label={
             <Typography
               size="M"
               text="Espi"

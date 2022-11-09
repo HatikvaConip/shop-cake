@@ -1,5 +1,4 @@
-.container-chips {
-  background-color: aliceblue;
+.container-chip {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -7,38 +6,61 @@
   text-align: center;
 
 &:hover {
-  background-color: red;
+  background-color: #0000001f;
 }
 &:active {
-  background-color: rgb(203, 233, 8);
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 }
 &:focus{
-  border: 10px solid black;
+  border: 1px solid black;
   padding: 5px;
 }
 }
+.filled {
+  background-color: #00000014;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 12px;
+  white-space: nowrap;
+ /*  &:hover {
+    background-color: #0000001f;
+  }
+  &:active {
+   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  } */
+}
+
+.outline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 12px;
+  white-space: nowrap;
+  background-color: transparent;
+  color: black;
+  border: 1px solid #bdbdbd;
+} 
+
 .reverse {
   flex-direction: row-reverse;
 }
 .s-size {
-  width: 150px;
-  height: 40px;
-  font-size: 13px;
+  width: 90px; 
+  height: 32px;
+  /* font-size: 13px; */
+ 
 }
 .m-size {
-  width: 200px;
-  height: 40px;
-  font-size: 15px;
+  width: 130px;
+  height: 38px;
+ /*  font-size: 15px; */
 }
 .l-size {
-  width: 250px;
+  width: 170px;
   height: 40px;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 .disabled{
   pointer-events: none;
   opacity: 0.7;
 }
-
-//pointer-events: none;
-//opacity: 0.4;

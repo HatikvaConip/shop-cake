@@ -2,15 +2,23 @@ import "./chip.scss";
 import { getMargin } from "../../utils/getMargin";
 import { getBorderRadius } from "../../utils/getBorderRadius";
 
-const Chips = ({
-  variant = "M",
+const Chip = ({
+  size = "M",// size
   margin = [],
   borderRadius = [],
   icon,
-  text,
+  label,
   button,
   isReverse = false,
   disabled = false,
+  variant = "", // filled | outline | text
+  classes = {
+    chip: "",
+    icon: "",
+    label: "",
+    button: ""
+
+  },
   style = {},
 }) => {
   return (
@@ -23,17 +31,18 @@ const Chips = ({
         borderRadius: getBorderRadius(borderRadius),
         ...style?.Chips,
       }}
-      className={`container-chips ${
+      className={`container-chip ${
         isReverse && "reverse"
-      } ${variant.toLowerCase()}-size
+      } ${size.toLowerCase()}-size ${variant}
       ${disabled && "disabled"}
+      ${classes?.chip}
       `}
       tabIndex="1"
     >
-      {icon && <span style={style?.icon}>{icon}</span>}
-      {text && <span style={style?.text}>{text}</span>}
-      {button && <span style={style?.button}>{button}</span>}
+      {icon && <span className="icon">{icon}</span>}
+      {label && <span className="label">{label}</span>}
+      {button && <span className="button">{button}</span>}
     </div>
   );
 };
-export default Chips;
+export default Chip;
