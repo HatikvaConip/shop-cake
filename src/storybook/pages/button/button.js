@@ -2,32 +2,45 @@ import "./button.scss"
 import Button from "../../../components/button/button";
 
 const ButtonPage = () => {
+const buttons1 = [
+  {
+    label: "text",
+    size: "s",
+    variant: "text",
+    handleClick: () => null,
+  },
+  {
+    label: "FILLED",
+    size: "s",
+    variant: "filled",
+    handleClick: () => null,
+  },
+  {
+    label: "OUTLINE",
+    size: "s",
+    variant: "outline",
+    handleClick: () => null,
+  },
+]
   return (
     <div className="container-page-button">
       <div className="container-row">
-        <Button
-          label="text"
-          size="S"
-          variant={"text"}
-          handleClick={() => null}
-        />
-        <Button
-          label="FILLED"
-          size="S"
-          variant={"filled"}
-          handleClick={() => null}
-        />
-        <Button
-          label="OUTLINE"
-          size="S"
-          variant={"outline"}
-          handleClick={() => null}
-        />
+        {
+          buttons1.map((b, i) => (
+            <Button
+            key={i}
+            label={b.label}
+            size={b.size}
+            variant={b.variant}
+            handleClick={b.handleClick}
+          />
+          ))
+        }
       </div>
       <div className="container-row">
         <Button
           label="Small"
-          size="S"
+          size="s"
           variant={"text"}
           handleClick={() => null}
         />
@@ -39,13 +52,13 @@ const ButtonPage = () => {
         />
         <Button
           label="large"
-          size="L"
+          size="l"
           variant={"text"}
           handleClick={() => null}
         />
         <Button
           label="disabled"
-          size="L"
+          size="l"
           variant={"text"}
           disabled={true}
           handleClick={() => null}
@@ -54,19 +67,19 @@ const ButtonPage = () => {
       <div className="container-row">
         <Button
           label="small"
-          size="S"
+          size="s"
           variant={"filled"}
           handleClick={() => null}
         />
         <Button
           label="medium"
-          size="M"
+          size="m"
           variant={"filled"}
           handleClick={() => null}
         />
         <Button
           label="large"
-          size="L"
+          size="l"
           variant={"filled"}
           handleClick={() => null}
         />
@@ -81,7 +94,7 @@ const ButtonPage = () => {
       <div className="container-row">
         <Button
           label="small"
-          size="S"
+          size="s"
           variant={"outline"}
           handleClick={() => null}
         />

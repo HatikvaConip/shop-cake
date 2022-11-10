@@ -45,6 +45,11 @@ const Navbar = () => {
             Hamburger
           </Link>
         </li>
+        <li>
+          <Link className="link" to="/storybook/toast">
+            Toast
+          </Link>
+        </li>
       </ul>
     </div>
   );

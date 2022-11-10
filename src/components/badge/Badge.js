@@ -2,6 +2,7 @@
 import "./badge.scss";
 import { getMargin } from "../../utils/getMargin";
 import { getBorderRadius } from "../../utils/getBorderRadius";
+import getSize from "../../utils/getSize";
 
 const Badge = ({
   bgColor = "",
@@ -12,12 +13,7 @@ const Badge = ({
   text,
   style = {},
 }) => {
-  const badgeSize =
-    size.toUpperCase() === "S"
-      ? "small"
-      : size.toUpperCase() === "M"
-      ? "medium"
-      : "large";
+  
   return (
     <div
       style={{
@@ -26,7 +22,7 @@ const Badge = ({
         borderRadius: getBorderRadius(borderRadius),
         ...style?.badge,
       }}
-      className={`base ${badgeSize}`}
+      className={`base ${getSize(size)}`}
     >
       {text && <span style={style?.text}>{text}</span>}
       {icon && <span style={style?.icon}>{icon}</span>}

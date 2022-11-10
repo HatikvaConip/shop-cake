@@ -1,9 +1,10 @@
 import "./chip.scss";
 import { getMargin } from "../../utils/getMargin";
 import { getBorderRadius } from "../../utils/getBorderRadius";
+import cn from "../../utils/cn";
 
 const Chip = ({
-  size = "M",// size
+  size = "",// size
   margin = [],
   borderRadius = [],
   icon,
@@ -17,19 +18,15 @@ const Chip = ({
     icon: "",
     label: "",
     button: ""
-
   },
-  style = {},
+  ...rest
 }) => {
   return (
     <div
-      /* onFocus={() => {
-      console.log("pippo");
-      }} */
+    {...rest}
       style={{
         margin: getMargin(margin),
         borderRadius: getBorderRadius(borderRadius),
-        ...style?.Chips,
       }}
       className={`container-chip ${
         isReverse && "reverse"
@@ -37,11 +34,11 @@ const Chip = ({
       ${disabled && "disabled"}
       ${classes?.chip}
       `}
-      tabIndex="1"
+      /* tabIndex="1" */ // propieda que sirve para la funcion focus
     >
-      {icon && <span className="icon">{icon}</span>}
-      {label && <span className="label">{label}</span>}
-      {button && <span className="button">{button}</span>}
+      {icon && <span className={cn("icon",classes.icon)}>{icon}</span>}
+      {label && <span className={cn("label",classes.label)}>{label}</span>}
+      {button && <span className={cn("button",classes.button)}>{button}</span>}
     </div>
   );
 };

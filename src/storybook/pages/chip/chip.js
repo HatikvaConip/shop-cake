@@ -9,10 +9,10 @@ const ChipPage = () => {
   return (
     <div className="container-page-chip">
       <div className="container-row">
-        <Chip
+<Chip
           classes={{ chip: "chip" }}
-          size="S"
-          margin={["20"]}
+          size="s"
+          margin={["14"]}
           borderRadius={["20"]}
           label={
             <Typography
@@ -21,18 +21,34 @@ const ChipPage = () => {
               color={"black"}
               fontFamily={"verdana"}
               fontStyle={"Italic"}
-              margin={[]}
             />
           }
           isReverse={false}
           disabled={true}
           variant={"filled"}
-          style
         />
         <Chip
           classes={{ chip: "chip" }}
-          size="S"
-          margin={["20"]}
+          size="m"
+          margin={["14"]}
+          borderRadius={["20"]}
+          label={
+            <Typography
+              size="S"
+              text="Chip Filled"
+              color={"black"}
+              fontFamily={"verdana"}
+              fontStyle={"Italic"}
+            />
+          }
+          isReverse={false}
+          disabled={true}
+          variant={"filled"}
+        />
+        <Chip
+          classes={{ chip: "chip" }}
+          size="l"
+          margin={["14"]}
           borderRadius={["20"]}
           label={
             <Typography
@@ -41,7 +57,6 @@ const ChipPage = () => {
               color={"black"}
               fontFamily={"verdana"}
               fontStyle={"Italic"}
-              margin={[]}
             />
           }
           isReverse={false}
@@ -49,12 +64,47 @@ const ChipPage = () => {
           variant={"outline"}
           style
         />
+</div>
+      <div className="container-row">
+        <Chip
+          classes={{ chip: "chip" }}
+          margin={["14"]}
+          borderRadius={["20"]}
+          label={
+            <Typography
+              size="S"
+              text="Chip Filled"
+              color={"black"}
+              fontFamily={"verdana"}
+              fontStyle={"Italic"}
+            />
+          }
+          isReverse={false}
+          disabled={true}
+          variant={"filled"}
+        />
+        <Chip
+          classes={{ chip: "chip" }}
+          margin={["14"]}
+          borderRadius={["20"]}
+          label={
+            <Typography
+              size="S"
+              text="Chip Outlined"
+              color={"black"}
+              fontFamily={"verdana"}
+              fontStyle={"Italic"}
+            />
+          }
+          isReverse={false}
+          disabled={true}
+          variant={"outline"}
+        />
       </div>
       <div className="container-row-pointer">
         <Chip
           classes={{ chip: "chip" }}
-          size="S"
-          margin={["20"]}
+          margin={["14"]}
           borderRadius={["20"]}
           label={
             <Typography
@@ -63,18 +113,15 @@ const ChipPage = () => {
               color={"black"}
               fontFamily={"verdana"}
               fontStyle={"Italic"}
-              margin={[]}
             />
           }
           isReverse={false}
           disabled={false}
           variant={"filled"}
-          style
         />
         <Chip
           classes={{ chip: "chip" }}
-          size="S"
-          margin={["20"]}
+          margin={["14"]}
           borderRadius={["20"]}
           label={
             <Typography
@@ -83,20 +130,17 @@ const ChipPage = () => {
               color={"black"}
               fontFamily={"verdana"}
               fontStyle={"Italic"}
-              margin={[]}
             />
           }
           isReverse={false}
           disabled={false}
           variant={"outline"}
-          style
         />
       </div>
       <div className="container-row">
       <Chip
         classes={{ chip: "chip" }}
-        size="S"
-        margin={["15"]}
+        margin={["14"]}
         borderRadius={["20"]}
         label={
           <Typography
@@ -116,8 +160,7 @@ const ChipPage = () => {
       />
       <Chip
         classes={{ chip: "chip" }}
-        size="S"
-        margin={["15"]}
+        margin={["14"]}
         borderRadius={["20"]}
         label={
           <Typography
@@ -139,8 +182,7 @@ const ChipPage = () => {
       <div className="container-row">
       <Chip
         classes={{ chip: "chip" }}
-        size="l"
-        margin={["15"]}
+        margin={["14"]}
         borderRadius={["20"]}
         label={
           <Typography
@@ -160,8 +202,7 @@ const ChipPage = () => {
       />
       <Chip
         classes={{ chip: "chip" }}
-        size="l"
-        margin={["15"]}
+        margin={["14"]}
         borderRadius={["20"]}
         label={
           <Typography
@@ -180,40 +221,173 @@ const ChipPage = () => {
         variant={"outline"}
       />
       </div>
+      <div className="container-row">
+      <Chip
+        classes={{ chip: "chip" }}
+        margin={["14"]}
+        borderRadius={["20"]}
+        label={
+          <Typography
+            size="s"
+            text="Clickable Deletable"
+            color={"black"}
+            fontFamily={"verdana"}
+            fontStyle={"Italic"}
+          />
+        }
+        icon={
+          <Icon
+            icon={icon}
+            width="20px"
+            height="20px"
+            borderRadius={["20"]}
+          />
+        }
+        isReverse={true}
+        disabled={false}
+        variant={"filled"}
+      />
+      <Chip
+        classes={{ chip: "chip" }}
+        margin={["14"]}
+        borderRadius={["20"]}
+        label={
+          <Typography
+            size="s"
+            text="Clickable Deletable"
+            color={"black"}
+            fontFamily={"verdana"}
+            fontStyle={"Italic"}
+          />
+        }
+        icon={
+          <Icon
+            icon={icon}
+            width="20px"
+            height="20px"
+            borderRadius={["20"]}
+          />
+        }
+        isReverse={true}
+        disabled={false}
+        variant={"outline"}
+      />
+      </div>
+      <div className="container-row">
+      <Chip
+        classes={{ chip: "chip" }}
+        margin={["14"]}
+        borderRadius={["20"]}
+        label={
+          <Typography
+            size="s"
+            text="Clickable Deletable"
+            color={"black"}
+            fontFamily={"verdana"}
+            fontStyle={"Italic"}
+          />
+        }
+        icon={
+          <Icon
+            icon={icon}
+            width="20px"
+            height="20px"
+            borderRadius={["20"]}
+          />
+        }
+        isReverse={false}
+        disabled={false}
+        variant={"filled"}
+      />
+      <Chip
+        classes={{ chip: "chip" }}
+        margin={["14"]}
+        borderRadius={["20"]}
+        label={
+          <Typography
+            size="s"
+            text="Clickable Deletable"
+            color={"black"}
+            fontFamily={"verdana"}
+            fontStyle={"Italic"}
+          />
+        }
+        icon={
+          <Icon
+            icon={icon}
+            width="20px"
+            height="20px"
+            borderRadius={["20"]}
+          />
+        }
+        isReverse={false}
+        disabled={false}
+        variant={"outline"}
+      />
+      </div>
+      <div className="container-row">
       <Chip
         classes={{ chip: "chip" }}
         size="S"
-        margin={["15"]}
+        margin={["14"]}
         borderRadius={["20"]}
         icon={
           <Icon
             icon={icon}
             width="20px"
             height="20px"
-            bgColor
-            margin={[]}
             borderRadius={["20"]}
-            style
           />
         }
         label={
           <Typography
-            size="M"
+            size="s"
             text="Espi"
             color={"black"}
             fontFamily={"verdana"}
             fontStyle={"Italic"}
-            margin={[]}
           />
         }
         button={
           <Button label="X" classes={{ buttonExternal: "buttonExternal" }} />
         }
         isReverse={false}
-        disabled={true}
+        disabled={false}
         variant={"filled"}
         style
       />
+      <Chip
+        classes={{ chip: "chip" }}
+        size="S"
+        margin={["14"]}
+        borderRadius={["20"]}
+        icon={
+          <Icon
+            icon={icon}
+            width="20px"
+            height="20px"
+            borderRadius={["20"]}
+          />
+        }
+        label={
+          <Typography
+            size="s"
+            text="Espi"
+            color={"black"}
+            fontFamily={"verdana"}
+            fontStyle={"Italic"}
+          />
+        }
+        button={
+          <Button label="X" classes={{ buttonExternal: "buttonExternal" }} />
+        }
+        isReverse={true}
+        disabled={false}
+        variant={"filled"}
+        style
+      />
+      </div >
+      
     </div>
   );
 };
