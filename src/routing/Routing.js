@@ -8,7 +8,8 @@ import {HamburgerMenuPage} from "../storybook/pages/hamburger/hamburger";
 import TypographyPage from "../storybook/pages/typography/typography";
 import ChipPage from "../storybook/pages/chip/chip";
 import IconPage from "../storybook/pages/icon/icon";
-import ToastPage from "../storybook/pages/toast/toast";
+import ToastPage from "../storybook/pages/toastJsPage/toastPage";
+/*import ToastPage from "../storybook/pages/toast/toast.tsx"; */
 
 // mocks
 const Routing = ({ cards }) => {
@@ -24,7 +25,8 @@ const Routing = ({ cards }) => {
         <Route exact path="/storybook/typography" element={<TypographyPage/>} />
         <Route exact path="/storybook/icon" element={<IconPage/>} />
         <Route exact path="/storybook/hamburger" element={<HamburgerMenuPage />} />
-        <Route exact path="/storybook/toast" element={<ToastPage />} />
+       {/*  <Route exact path="/storybook/toast" element={<ToastPage />} /> */}
+       <Route exact path="/storybook/toastJsPage" element={<ToastPage />}/>
       </Routes>
 
   );

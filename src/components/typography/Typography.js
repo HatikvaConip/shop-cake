@@ -8,6 +8,7 @@ const Typography = ({
   text = "",
   color,
   fontFamily,
+  justifyContent,
   fontStyle,
   margin = [""],
 }) => {
@@ -19,6 +20,7 @@ const Typography = ({
         color: color,
         fontFamily: fontFamily,
         fontStyle: fontStyle,
+        justifyContent:justifyContent,
         fontSize: getFontSize(size),
         margin: getMargin(margin),
       }}

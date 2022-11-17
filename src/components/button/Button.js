@@ -17,7 +17,7 @@ const Button = ({
     <div
       className={`base ${getSize(size)} ${variant} ${
         disabled && "disabled"
-      } ${classes?.buttonExternal}`}
+      } ${classes.buttonExternal}`}
       onClick={handleClick}
       {...rest}
     >

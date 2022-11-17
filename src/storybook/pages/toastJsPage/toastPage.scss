@@ -1,0 +1,35 @@
+.toast-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+.container-alerts {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border: 1px solid #e7ebf0;
+  margin: 10px 5px;
+  align-items: center;
+  padding: 24px;
+  border-radius: 10px;
+  gap: 10px;
+}
+.buttonExternal {
+    display: flex;
+    font-style: normal;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+    margin: 0px;
+    min-width: 20px;
+    min-height: 20px;
+    color:inherit;
+    border-radius: 15px;
+    &:hover {
+        background-color: #0000000a;
+      color: #000000ec;
+    }
+  }

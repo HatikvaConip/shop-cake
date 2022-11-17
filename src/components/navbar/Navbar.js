@@ -45,11 +45,17 @@ const Navbar = () => {
             Hamburger
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link className="link" to="/storybook/toast">
             Toast
           </Link>
+        </li> */}
+          <li>
+          <Link className="link" to="/storybook/toastJsPage">
+            TOAST
+          </Link>
         </li>
+
       </ul>
     </div>
   );
